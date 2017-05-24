@@ -9,7 +9,7 @@
         this.footerlinks = footerList;
     }]);
     
-    app.controller("ReviewController", function () {
+    app.controller("ReviewController", ['$http', function ($http) {
         this.review = {};
         this.addReview = function (application) {
             this.review.createdOn = Date.now();
@@ -19,7 +19,7 @@
             });
             this.review = {};
         };
-    });
+    }]);
 
 })();
 

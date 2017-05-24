@@ -10,7 +10,7 @@
         </li>
     </ul>
     <!--  Review Form -->
-    <form name="reviewForm" role="form" ng-controller="ReviewController as reviews" ng-submit="reviewForm.$valid && reviews.addReview(application)" novalidate>
+    <form name="reviewForm" role="form" ng-controller="ReviewController as reviews" ng-submit="reviewForm.$valid && reviews.addReview(application); reviewForm.$setPristine();" novalidate>
         <!--  Live Preview -->
         <blockquote ng-show="reviews.review.stars">
             <strong>{{reviews.review.stars}} Stars</strong>
